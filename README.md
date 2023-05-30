@@ -178,7 +178,7 @@ Fertig !
 
 Und  zum Schluss noch Thema (ca. 5 Minuten) : Wolust / Webseite / Wer sich interessiert soll kommen.
 ----------------------------------------------------------------------------------------------------
-
+![Rest-API](images/wolust-tux.png)
 Ich probiere mich diesmal kürzer zu fassen als beim letzten Mal.
 
 Was war  2022/2023 ?
