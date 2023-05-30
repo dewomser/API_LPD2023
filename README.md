@@ -14,7 +14,7 @@ APIs und Bash-Kommandozeile
 ===========================
 Keine Angst . Ich erkläre das Stück für Stück
 
-![Rest-API](.images/450px-Rest-API.png)
+![Rest-API](images/450px-Rest-API.png)
 
 
 Was ist Bash? Unterschied zu Fensterprogrammen.
