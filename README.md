@@ -2,7 +2,9 @@
 ## Script zu meinem Vortrag Linux Presentationday 2023-1
 Angelegt Donnerstag 25 Mai 2023
 **Stefan Höhn   Wormser Linux User Stammtisch  Wolust**
-![](file:///home/karl/Schreibtisch/wolust-tux.png)
+
+
+
 
 Mir gehts mehr um die Möglichkeiten als um eine korrekte Definition.
 Folien ? Internet an persönliche Anforderungen anpassen. Hacken so wie ich das möchte.
@@ -12,7 +14,8 @@ APIs und Bash-Kommandozeile
 ===========================
 Keine Angst . Ich erkläre das Stück für Stück
 
-![](file:///home/karl/Schreibtisch/450px-Rest-API.png)
+![Rest-API](.images/450px-Rest-API.png)
+
 
 Was ist Bash? Unterschied zu Fensterprogrammen.
 -----------------------------------------------
