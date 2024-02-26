@@ -79,6 +79,9 @@ oder **Temperaturwarnung**  Frost, Regen, … ☀️☔️🥶️
 Popups bei Störungen  Server, Maschinen, IOT
 
 **Code** Beispiel für einfache Temperaturwarnung 🌡️
+UHHH , da hab ich einen Fehler gemacht. Mit ASCII-Eingabe  kann Bash nicht rechnen.
+**Voller Fehler**
+<code>
 ``t=$(curl -s`` [``https://wetter.hs-worms.de/api/v3/data``](https://wetter.hs-worms.de/api/v3/data) ``| jq '.temperature.out')``
 ``# 15.8  nach 15,8  (weil deutsch)`` 
 ``t=${t//./,}``
@@ -88,6 +91,19 @@ Popups bei Störungen  Server, Maschinen, IOT
 ``else``
   ``echo "Ganz schön warm !"``
 ``fi``
+</code>
+**So geht das richtig**
+<code>
+#!/bin/bash
+t=$(curl -s https://wetter.hs-worms.de/api/v3/data | jq '.temperature.out')
+t1=15
+a=$(echo "$t<$t1"|bc)
+if [[ $a -eq 1 ]]; then
+   echo "Uh, das ist kalt !"
+else
+  echo "Ganz schön warm !"
+fi
+</code>
 
 **Experimental  bei Twitter hochladen**  (vielleicht ist dieses Perlscript jetzt auch schon gesperrt)
 nur **mit Token** sehr eingeschränkt
