@@ -80,6 +80,7 @@ Popups bei Störungen  Server, Maschinen, IOT
 
 **Code** Beispiel für einfache Temperaturwarnung 🌡️
 UHHH , da hab ich einen Fehler gemacht. Mit ASCII-Eingabe  kann Bash nicht rechnen.
+
 **Voller Fehler**
 <code>
 ``t=$(curl -s`` [``https://wetter.hs-worms.de/api/v3/data``](https://wetter.hs-worms.de/api/v3/data) ``| jq '.temperature.out')``
@@ -143,16 +144,19 @@ Regenradar-API  vom DWD (Auswerung mit Python QGIS)
 
 ### Luftqualität Worms
 (für Fortgeschrittene Bash User)
+<code>
 readarray -td ";" lq <<< $(curl "<https://www.umweltbundesamt.de/api/air_data/v3/airquality/csv?date_from=$(date> -d 'yesterday' +%F)&time_from=24&date_to=$(date +%F)&time_to=24&station=1460&lang=de" |grep -E x\|$(date -d '1 hours ago' +%H))
 echo ${lq[1]}:${lq[7]};echo ${lq[2]}:${lq[8]};echo ${lq[3]}:${lq[9]};echo ${lq[4]}:${lq[10]};echo ${lq[5]}:${lq[11]};echo ${lq[6]}:${lq[12]}
+</code>
 **Kommt sowas raus :**
+<code>
 Datum:"'26.05.2023 04:00'"
 "Feinstaub (PM₁₀) stündlich gleitendes Tagesmittel in µg/m³":15
 "Ozon (O₃) Ein-Stunden-Mittelwert in µg/m³":58
 "Stickstoffdioxid (NO₂) Ein-Stunden-Mittelwert in µg/m³":15
 "Feinstaub (PM₂,₅) stündlich gleitendes Tagesmittel in µg/m³":9
 Luftqualitätsindex DERP023:"sehr gut"
-
+</code>
 
 ### Audio API mit KDE  (Windowmanager für Linux)
 Audio API von KDE  wird benutzt zum Abfragen.
